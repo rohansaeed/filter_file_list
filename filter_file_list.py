@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 # To use this script, first argument should be a text file with the list of files you want to filter on (each file name on a new line)
 # The second argument should be the extension you want to filter on e.g. "jpg"
 #
@@ -27,6 +28,6 @@ if __name__ == "__main__":
 	filtered_clean = []
 	for file in filtered_list:
 		file = file.rstrip('\n')
-		print(file)
+#		print(file)
 		filtered_clean.append(file)
 	print(filtered_clean)
