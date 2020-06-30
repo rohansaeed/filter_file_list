@@ -10,16 +10,15 @@ import re
 import sys
 
 def filter_files(files, ext):
-	# For this exercise, assume the filenames are provided for you in the first parameter, 'files', a list of strings.
+	# Filenames are provided in the first parameter, 'files', a list of strings.
 	# ext is the extension you are looking to filter on (e.g. .jpg, .gif, etc.)
-
 	filtered_files = []
 	# extract f from list of "files"
 	filtered_files = [f for f in files if re.findall(r"\S+\.%s" %ext, f)] 
-
-  
+ 
 	# `filtered_files` will be a list of strings / filenames, e.g. ['pantheon.jpg', 'funny_cat.jpg']
 	return filtered_files
+
 
 if __name__ == "__main__":
 	file_input = open(sys.argv[1], "r")
